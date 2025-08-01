@@ -1,0 +1,85 @@
+.sidebar {
+  height: 100vh !important;
+  background-color: #ff2f00ef;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+  color: white;
+  transition: all 0.3s ease-in-out;
+  overflow-y: auto;
+  padding: 20px 10px;
+}
+
+/* Optional scrollbar styling */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+/* Menu container spacing */
+.menu {
+  padding-top: 80px;
+}
+
+/* Individual menu item spacing */
+.menu-item {
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Link style */
+.menu-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+/* Icon style */
+.menu-item i {
+  font-size: 1.2rem;
+  margin-right: 12px;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.menu-item:hover {
+  background-color: #3e4500;
+  transform: translateX(5px);
+}
+
+.menu-item:hover a,
+.menu-item:hover i {
+  color: #ffd700;
+}
+
+/* Active menu item */
+.active {
+  background-color: rgb(255, 255, 255);
+  padding: 12px 15px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  animation: popIn 0.3s ease;
+}
+
+.active a,
+.active i {
+  color: #10bccb;
+}
+
+/* Active animation */
+@keyframes popIn {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
